@@ -86,6 +86,11 @@ install_passwall() {
     ./scripts/feeds install -p passwall -f luci-app-passwall
 }
 
+install_nikki() {
+    echo "正在从官方仓库安装 nikki..."
+    ./scripts/feeds install -p nikki -f nikki luci-app-nikki
+}
+
 install_fullconenat() {
     if [ ! -d $BUILD_DIR/package/network/utils/fullconenat-nft ]; then
         ./scripts/feeds install -p small8 -f fullconenat-nft
